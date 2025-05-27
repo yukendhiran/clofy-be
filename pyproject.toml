@@ -19,6 +19,8 @@ dev = [
     "basedpyright>=1.29.2",
     "pre-commit>=3.3.3",
     "ruff>=0.11.11",
+    "invoke>=2.2.0",
+    "pytest>=8.0.0",
 ]
 
 [tool.ruff.lint]
@@ -27,3 +29,11 @@ select = ["E", "F", "B", "I"]
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+# --- Add/Modify this section for Setuptools/Packaging ---
+[tool.setuptools]
+# Explicitly list the packages to include.
+# This prevents setuptools from trying to automatically discover packages
+# which causes conflicts with directories like 'static'.
+packages = ["app"] # Only include 'app' as a Python package.
+

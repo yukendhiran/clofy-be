@@ -6,6 +6,7 @@ app = FastAPI(docs_url=None, redoc_url=None)
 
 setup_docs(app)
 
+
 # Example route
 @app.get("/")
 async def read_root():

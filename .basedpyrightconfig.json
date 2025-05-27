@@ -1,0 +1,8 @@
+{
+  "typeCheckingMode": "strict",
+  "include": ["app"],
+  "exclude": ["tests", "migrations"],
+  "reportMissingImports": true,
+  "reportUnusedImport": true,
+  "pythonVersion": "3.12"
+}
