@@ -1,13 +1,10 @@
 from fastapi import FastAPI
 
-app = FastAPI(
-    swagger_ui_parameters={
-        "syntaxHighlight": {"theme": "obsidian"},
-        "defaultModelsExpandDepth": -1,
-        "docExpansion": "none",
-    }
-)
+from app.core.docs import setup_docs
 
+app = FastAPI(docs_url=None, redoc_url=None)
+
+setup_docs(app)
 
 # Example route
 @app.get("/")
